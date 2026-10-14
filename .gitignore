@@ -2,6 +2,8 @@
 /out/
 *.jpg
 !examples/*.jpg
+*.png
+!examples/*.png
 daily.md
 !examples/daily.md
 data.json

@@ -17,10 +17,13 @@ Configuration par variables d'environnement :
 """
 import argparse
 import base64
+import html
+import io
 import json
 import os
 import re
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -397,7 +400,7 @@ def clean_name(name):
     return re.sub(r"\s+", " ", re.sub(r"[\U00010000-\U0010FFFF\u2600-\u27BF\uFE0F\u200D]", "", name)).strip()
 
 
-def render(model, sprint_name, stat_name, out):
+def render(model, sprint_name, stat_name, out, figsize=(12, 6.4), dpi=150, image_format="jpg"):
     import matplotlib
 
     matplotlib.use("Agg")
@@ -412,8 +415,11 @@ def render(model, sprint_name, stat_name, out):
     start, end, now, last = model["start"], model["end"], model["now"], model["last"]
     scope_now, done_now = model["scope_now"], model["done_now"]
 
-    fig, ax = plt.subplots(figsize=(12, 6.4), dpi=150)
-    fig.subplots_adjust(left=0.07, right=0.95, top=0.76, bottom=0.09)
+    fig, ax = plt.subplots(figsize=figsize, dpi=dpi)
+    # Marges en pouces : l'en-tête (titre, sous-titre, légende) garde sa place quel que soit le format.
+    width_in, height_in = figsize
+    left = 0.84 / width_in
+    fig.subplots_adjust(left=left, right=1 - 0.6 / width_in, top=1 - 1.55 / height_in, bottom=0.6 / height_in)
 
     for a, b in model["nonworking"]:
         ax.axvspan(x(a), x(b), color=COLORS["nonworking"], lw=0, zorder=0)
@@ -476,13 +482,14 @@ def render(model, sprint_name, stat_name, out):
               fontsize=9.5, labelcolor=COLORS["title"], handlelength=2.2, columnspacing=2.5)
 
     pct = round(100 * done_now / scope_now) if scope_now else 0
-    fig.text(0.07, 0.955, f"Burnup · {sprint_name}", fontsize=15, fontweight="bold", color=COLORS["title"])
-    fig.text(0.07, 0.915,
+    fig.text(left, 1 - 0.3 / height_in, f"Burnup · {sprint_name}", fontsize=15, fontweight="bold", color=COLORS["title"])
+    fig.text(left, 1 - 0.55 / height_in,
              f"{fmt(done_now)} / {fmt(scope_now)} {stat_name} terminés ({pct} %) · "
              f"directive à date : {fmt(model['guide_now'])} · données du {to_dt(now):%d/%m/%Y %H:%M}",
              fontsize=9.5, color=COLORS["text"])
 
-    fig.savefig(out, format="jpg", facecolor="white", pil_kwargs={"quality": 90})
+    options = {"pil_kwargs": {"quality": 90}} if image_format == "jpg" else {}
+    fig.savefig(out, format=image_format, facecolor="white", **options)
     plt.close(fig)
 
 
@@ -526,7 +533,7 @@ def board_markdown(state, link, amount):
     def tickets_of(lines):
         return sum(line["tickets"] for line in lines)
 
-    out = ["", "## État du sprint"]
+    out = ["", "## 🗂️ État du sprint"]
     for section in state:
         header = f"### {section['title']} · {plural(section['tickets'], 'ticket')}"
         if section["estimate"]:
@@ -561,7 +568,7 @@ def board_markdown(state, link, amount):
     return out
 
 
-def write_report(path, image, base_url, sprint_name, stat_name, model, changes, state):
+def report_markdown(image_ref, base_url, sprint_name, stat_name, model, changes, state):
     unit = "SP" if stat_name.lower() == "story points" else stat_name
 
     def amount(value):
@@ -579,24 +586,23 @@ def write_report(path, image, base_url, sprint_name, stat_name, model, changes, 
     now, since = to_dt(model["now"]), datetime.fromisoformat(changes["since"])
     scope, done = model["scope_now"], model["done_now"]
     pct = round(100 * done / scope) if scope else 0
-    image_ref = os.path.relpath(os.path.abspath(image), os.path.dirname(os.path.abspath(path)))
     lines = [
-        f"# Daily du {now:%d/%m/%Y} · {sprint_name}",
+        f"# 📋 Daily du {now:%d/%m/%Y} · {sprint_name}",
         "",
         f"![Burnup du sprint]({image_ref})",
         "",
         f"**{fmt(done)} / {fmt(scope)} {unit} terminés ({pct} %)** · directive à date : {amount(model['guide_now'])}",
         "",
-        f"## Depuis hier ({FR_DAYS[since.weekday()]} {since:%d/%m %H:%M})",
+        f"## 🕘 Depuis hier ({FR_DAYS[since.weekday()]} {since:%d/%m %H:%M})",
         "",
         f"Terminé **{signed(changes['doneDelta'])}** · Périmètre **{signed(changes['scopeDelta'])}**",
     ]
     sections = [
-        ("Terminés", changes["done"], lambda i: amount(i["estimate"])),
-        ("Réouverts", changes["reopened"], lambda i: amount(i["estimate"])),
-        ("Ajoutés au sprint", changes["added"], lambda i: amount(i["estimate"])),
-        ("Retirés du sprint", changes["removed"], lambda i: amount(i["estimate"])),
-        ("Ré-estimés", changes["reestimated"], lambda i: f"{amount(i['previous'])} → {amount(i['estimate'])}"),
+        ("✅ Terminés", changes["done"], lambda i: amount(i["estimate"])),
+        ("↩️ Réouverts", changes["reopened"], lambda i: amount(i["estimate"])),
+        ("➕ Ajoutés au sprint", changes["added"], lambda i: amount(i["estimate"])),
+        ("➖ Retirés du sprint", changes["removed"], lambda i: amount(i["estimate"])),
+        ("✏️ Ré-estimés", changes["reestimated"], lambda i: f"{amount(i['previous'])} → {amount(i['estimate'])}"),
     ]
     for title, items, detail in sections:
         if items:
@@ -606,8 +612,94 @@ def write_report(path, image, base_url, sprint_name, stat_name, model, changes, 
         lines += ["", "Aucun mouvement sur le sprint."]
     if state:
         lines += board_markdown(state, link, amount)
-    with open(path, "w", encoding="utf-8") as f:
-        f.write("\n".join(lines) + "\n")
+    return "\n".join(lines) + "\n"
+
+
+# --- Teams ----------------------------------------------------------------------
+
+def teams_html(markdown, image_tag=None):
+    """Convertit le rapport Markdown en HTML de message Teams.
+
+    Teams ignore les sauts de ligne : chaque ligne finit par <br>, et deux <br> séparent les blocs.
+    Sans `image_tag`, la ligne d'image est retirée.
+    """
+    def inline(text):
+        text = html.escape(text, quote=False)
+        text = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", text)
+        return re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", r'<a href="\2">\1</a>', text)
+
+    blocks = []
+    for block in markdown.strip().split("\n\n"):
+        rendered = []
+        for line in block.split("\n"):
+            if line.startswith("!["):
+                if image_tag:
+                    rendered.append(image_tag)
+            elif heading := re.match(r"#+ (.*)", line):
+                rendered.append(f"<b>{inline(heading[1])}</b>")
+            elif line.startswith("- "):
+                rendered.append("• " + inline(line[2:]))
+            else:
+                rendered.append(inline(line))
+        if rendered:
+            blocks.append("<br>\n".join(rendered))
+    return "<br><br>\n".join(blocks)
+
+
+# Teams refuse les messages de plus de 28 Ko (RequestEntityTooLarge) ; 27 000 octets passent.
+TEAMS_MAX_BYTES = 27_000
+
+
+def embedded_image(png, colors):
+    """Balise <img> d'un PNG en data URI, réduit à une palette de `colors` couleurs (net pour un graphique)."""
+    from PIL import Image
+
+    with Image.open(io.BytesIO(png)) as image:
+        palette = image.convert("RGB").quantize(colors=colors, dither=Image.Dither.NONE)
+        buffer = io.BytesIO()
+        palette.save(buffer, "PNG", optimize=True)
+    data = base64.b64encode(buffer.getvalue()).decode()
+    return f'<img src="data:image/png;base64,{data}" alt="Burnup du sprint">'
+
+
+def teams_message(markdown, model, sprint_name, stat_name, embed_image):
+    """HTML du message Teams ; avec `embed_image`, le burnup le plus net qui tient sous TEAMS_MAX_BYTES.
+
+    Teams l'affiche en vignette (~180 px de haut, dimensions HTML/CSS ignorées) et en pleine résolution au clic.
+    """
+    if embed_image:
+        # Rendu dédié, plus étroit que le JPG : le texte du graphique y est proportionnellement plus grand.
+        for width in (1000, 900, 800, 700, 600):
+            png = io.BytesIO()
+            render(model, sprint_name, stat_name, png, figsize=(9, 4.8), dpi=width / 9, image_format="png")
+            for colors in (32, 16):
+                message = teams_html(markdown, embedded_image(png.getvalue(), colors))
+                if len(message.encode()) <= TEAMS_MAX_BYTES:
+                    return message
+        print("Burnup trop lourd pour un message Teams : publié sans image.", file=sys.stderr)
+    return teams_html(markdown)
+
+
+def publish_teams(webhook_url, message, attempts=10):
+    """POST {"text": message} sur le webhook (Power Automate) ; réessaie avec un backoff exponentiel."""
+    body = json.dumps({"text": message}, ensure_ascii=False).encode()
+    for attempt in range(1, attempts + 1):
+        req = urllib.request.Request(webhook_url, data=body, method="POST",
+                                     headers={"Content-Type": "application/json"})
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                print(f"Teams : HTTP {resp.status}", file=sys.stderr)
+                return
+        except urllib.error.HTTPError as e:
+            error = f"HTTP {e.code} : {e.read().decode(errors='replace')[:500]}"
+        except urllib.error.URLError as e:
+            error = str(e.reason)
+        delay = min(2 ** attempt, 120)
+        print(f"Teams : échec {attempt}/{attempts} ({error})" + (f", nouvel essai dans {delay} s" if attempt < attempts else ""),
+              file=sys.stderr)
+        if attempt < attempts:
+            time.sleep(delay)
+    sys.exit("Publication Teams impossible.")
 
 
 def main():
@@ -622,7 +714,12 @@ def main():
     parser.add_argument("--report", help="Rapport Markdown : burnup, mouvements depuis hier, état du sprint")
     parser.add_argument("--since", help="Début de la fenêtre « depuis hier », heure du board, ex. '2026-10-13 09:00' "
                                         "(défaut : même heure, jour ouvré précédent)")
+    parser.add_argument("--teams-html", help="Écrit le message Teams (HTML) dans ce fichier")
+    parser.add_argument("--embed-image", action="store_true", help="Intègre le burnup au message Teams (data URI)")
+    parser.add_argument("--publish", action="store_true", help="Publie le message Teams sur TEAMS_WEBHOOK_URL")
     args = parser.parse_args()
+    if args.publish and not os.environ.get("TEAMS_WEBHOOK_URL"):
+        sys.exit("--publish : TEAMS_WEBHOOK_URL doit être défini.")
 
     if args.from_json:
         with open(args.from_json, encoding="utf-8") as f:
@@ -651,8 +748,20 @@ def main():
         print("Sauvegarde sans tickets (format antérieur) : état du sprint ignoré.", file=sys.stderr)
 
     render(model, clean_name(sprint_name), stat_name, args.out)
+    image_ref = args.out
     if args.report:
-        write_report(args.report, args.out, base_url, sprint_name, stat_name, model, changes, state)
+        image_ref = os.path.relpath(os.path.abspath(args.out), os.path.dirname(os.path.abspath(args.report)))
+    markdown = report_markdown(image_ref, base_url, sprint_name, stat_name, model, changes, state)
+    if args.report:
+        with open(args.report, "w", encoding="utf-8") as f:
+            f.write(markdown)
+    if args.teams_html or args.publish:
+        message = teams_message(markdown, model, clean_name(sprint_name), stat_name, args.embed_image)
+        if args.teams_html:
+            with open(args.teams_html, "w", encoding="utf-8") as f:
+                f.write(message)
+        if args.publish:
+            publish_teams(os.environ["TEAMS_WEBHOOK_URL"], message)
     print(json.dumps({
         "sprint": sprint_name,
         "statistic": stat_name,
@@ -662,6 +771,8 @@ def main():
         "dataTime": f"{to_dt(model['now']):%Y-%m-%d %H:%M}",
         "image": args.out,
         "report": args.report,
+        "teamsHtml": args.teams_html,
+        "published": args.publish,
         "sinceYesterday": changes,
         "board": state,
     }, ensure_ascii=False))

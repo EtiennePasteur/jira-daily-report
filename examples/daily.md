@@ -1,23 +1,23 @@
-# Daily du 14/10/2026 · Sprint 12 🍋
+# 📋 Daily du 14/10/2026 · Sprint 12 🍋
 
 ![Burnup du sprint](burnup.jpg)
 
 **14 / 68 SP terminés (21 %)** · directive à date : 29,4 SP
 
-## Depuis hier (mar. 13/10 17:01)
+## 🕘 Depuis hier (mar. 13/10 17:01)
 
 Terminé **+1 SP** · Périmètre **+3 SP**
 
-### Terminés (2)
+### ✅ Terminés (2)
 - [DEMO-115](https://example.atlassian.net/browse/DEMO-115) État de chargement sur la liste des clients · non estimé
 - [DEMO-149](https://example.atlassian.net/browse/DEMO-149) Retirer l'ancien feature flag de connexion · 1 SP
 
-### Ajoutés au sprint (3)
+### ➕ Ajoutés au sprint (3)
 - [DEMO-126](https://example.atlassian.net/browse/DEMO-126) Test de bout en bout : messagerie · 1 SP
 - [DEMO-151](https://example.atlassian.net/browse/DEMO-151) Champ de recherche sans exemple de saisie · 1 SP
 - [DEMO-152](https://example.atlassian.net/browse/DEMO-152) Nouvelle tentative sur erreur réseau · 1 SP
 
-## État du sprint
+## 🗂️ État du sprint
 
 ### Recette à faire · 7 tickets, 8 SP
 - Migration des droits : 5 · [DEMO-111](https://example.atlassian.net/browse/DEMO-111), [DEMO-112](https://example.atlassian.net/browse/DEMO-112), [DEMO-116](https://example.atlassian.net/browse/DEMO-116), [DEMO-117](https://example.atlassian.net/browse/DEMO-117), [DEMO-122](https://example.atlassian.net/browse/DEMO-122)
