@@ -1,0 +1,1608 @@
+{
+ "baseUrl": "https://example.atlassian.net",
+ "boardId": 1,
+ "sprint": {
+  "id": 12,
+  "state": "active",
+  "name": "Sprint 12 🍋",
+  "startDate": "2026-10-06T12:00:22.000Z",
+  "endDate": "2026-10-26T17:00:00.000Z",
+  "originBoardId": 1,
+  "goal": ""
+ },
+ "chart": {
+  "changes": {
+   "1752235523000": [
+    {
+     "key": "DEMO-102",
+     "statC": {},
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1758884578000": [
+    {
+     "key": "DEMO-103",
+     "statC": {},
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1767975067000": [
+    {
+     "key": "DEMO-107",
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1774517452000": [
+    {
+     "key": "DEMO-108",
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1782751519000": [
+    {
+     "key": "DEMO-111",
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1782810689000": [
+    {
+     "key": "DEMO-112",
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1789480395000": [
+    {
+     "key": "DEMO-115",
+     "statC": {},
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1789480841000": [
+    {
+     "key": "DEMO-101",
+     "statC": {
+      "newValue": 1.0
+     }
+    }
+   ],
+   "1789480851000": [
+    {
+     "key": "DEMO-109",
+     "statC": {
+      "newValue": 1.0
+     }
+    }
+   ],
+   "1789480854000": [
+    {
+     "key": "DEMO-112",
+     "statC": {
+      "newValue": 1.0
+     }
+    }
+   ],
+   "1789480863000": [
+    {
+     "key": "DEMO-110",
+     "statC": {
+      "newValue": 1.0
+     }
+    }
+   ],
+   "1789731263000": [
+    {
+     "key": "DEMO-108",
+     "statC": {
+      "newValue": 1.0
+     }
+    }
+   ],
+   "1789731305000": [
+    {
+     "key": "DEMO-113",
+     "statC": {
+      "newValue": 1.0
+     }
+    }
+   ],
+   "1789986458000": [
+    {
+     "key": "DEMO-109",
+     "column": {
+      "notDone": false
+     }
+    }
+   ],
+   "1789986497000": [
+    {
+     "key": "DEMO-110",
+     "column": {
+      "notDone": false
+     }
+    }
+   ],
+   "1790074166000": [
+    {
+     "key": "DEMO-113",
+     "column": {
+      "done": false
+     }
+    }
+   ],
+   "1790095672000": [
+    {
+     "key": "DEMO-116",
+     "statC": {
+      "newValue": 1.0
+     },
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1790095710000": [
+    {
+     "key": "DEMO-117",
+     "statC": {
+      "newValue": 1.0
+     },
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1790357443000": [
+    {
+     "key": "DEMO-107",
+     "statC": {
+      "newValue": 1.0
+     }
+    }
+   ],
+   "1790675941000": [
+    {
+     "key": "DEMO-111",
+     "statC": {
+      "newValue": 2.0
+     }
+    }
+   ],
+   "1790682975000": [
+    {
+     "key": "DEMO-118",
+     "statC": {
+      "newValue": 1.0
+     },
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1790683054000": [
+    {
+     "key": "DEMO-119",
+     "statC": {
+      "newValue": 1.0
+     },
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1790683120000": [
+    {
+     "key": "DEMO-120",
+     "statC": {
+      "newValue": 1.0
+     },
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1790683205000": [
+    {
+     "key": "DEMO-121",
+     "statC": {
+      "newValue": 1.0
+     },
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1790683263000": [
+    {
+     "key": "DEMO-122",
+     "statC": {
+      "newValue": 1.0
+     },
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1790683320000": [
+    {
+     "key": "DEMO-123",
+     "statC": {
+      "newValue": 1.0
+     },
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1790691519000": [
+    {
+     "key": "DEMO-124",
+     "statC": {
+      "newValue": 1.0
+     },
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1790691543000": [
+    {
+     "key": "DEMO-125",
+     "statC": {
+      "newValue": 1.0
+     },
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1790691846000": [
+    {
+     "key": "DEMO-126",
+     "statC": {
+      "newValue": 1.0
+     },
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1790695000000": [
+    {
+     "key": "DEMO-101",
+     "column": {
+      "done": false
+     }
+    }
+   ],
+   "1790853992000": [
+    {
+     "key": "DEMO-127",
+     "statC": {
+      "newValue": 1.0
+     },
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1791201301000": [
+    {
+     "key": "DEMO-128",
+     "statC": {
+      "newValue": 1.0
+     },
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1791301867000": [
+    {
+     "key": "DEMO-129",
+     "statC": {},
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1791301956000": [
+    {
+     "key": "DEMO-129",
+     "statC": {
+      "newValue": 13.0
+     }
+    }
+   ],
+   "1791302284000": [
+    {
+     "key": "DEMO-130",
+     "statC": {
+      "newValue": 13.0
+     },
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1791302529000": [
+    {
+     "key": "DEMO-130",
+     "statC": {
+      "oldValue": 13.0,
+      "newValue": 20.0
+     }
+    }
+   ],
+   "1791306397000": [
+    {
+     "key": "DEMO-111",
+     "added": true
+    },
+    {
+     "key": "DEMO-116",
+     "added": true
+    },
+    {
+     "key": "DEMO-125",
+     "added": true
+    },
+    {
+     "key": "DEMO-128",
+     "added": true
+    },
+    {
+     "key": "DEMO-117",
+     "added": true
+    }
+   ],
+   "1791306398000": [
+    {
+     "key": "DEMO-112",
+     "added": true
+    },
+    {
+     "key": "DEMO-109",
+     "added": true
+    },
+    {
+     "key": "DEMO-107",
+     "added": true
+    },
+    {
+     "key": "DEMO-120",
+     "added": true
+    },
+    {
+     "key": "DEMO-121",
+     "added": true
+    },
+    {
+     "key": "DEMO-101",
+     "added": true
+    },
+    {
+     "key": "DEMO-122",
+     "added": true
+    },
+    {
+     "key": "DEMO-110",
+     "added": true
+    },
+    {
+     "key": "DEMO-118",
+     "added": true
+    },
+    {
+     "key": "DEMO-119",
+     "added": true
+    }
+   ],
+   "1791306399000": [
+    {
+     "key": "DEMO-127",
+     "added": true
+    },
+    {
+     "key": "DEMO-124",
+     "added": true
+    },
+    {
+     "key": "DEMO-115",
+     "added": true
+    },
+    {
+     "key": "DEMO-108",
+     "added": true
+    },
+    {
+     "key": "DEMO-123",
+     "added": true
+    },
+    {
+     "key": "DEMO-113",
+     "added": true
+    }
+   ],
+   "1791306413000": [
+    {
+     "key": "DEMO-129",
+     "added": true
+    },
+    {
+     "key": "DEMO-130",
+     "added": true
+    }
+   ],
+   "1791306779000": [
+    {
+     "key": "DEMO-131",
+     "statC": {},
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1791373134000": [
+    {
+     "key": "DEMO-128",
+     "column": {
+      "notDone": false,
+      "done": true,
+      "newStatus": "10009"
+     }
+    }
+   ],
+   "1791373240000": [
+    {
+     "key": "DEMO-127",
+     "column": {
+      "notDone": false,
+      "done": true,
+      "newStatus": "10009"
+     }
+    }
+   ],
+   "1791386967000": [
+    {
+     "key": "DEMO-102",
+     "statC": {
+      "newValue": 3.0
+     }
+    }
+   ],
+   "1791387235000": [
+    {
+     "key": "DEMO-131",
+     "statC": {
+      "newValue": 3.0
+     }
+    }
+   ],
+   "1791387482000": [
+    {
+     "key": "DEMO-103",
+     "statC": {
+      "newValue": 2.0
+     }
+    }
+   ],
+   "1791388897000": [
+    {
+     "key": "DEMO-103",
+     "added": true
+    }
+   ],
+   "1791388911000": [
+    {
+     "key": "DEMO-131",
+     "added": true
+    }
+   ],
+   "1791388920000": [
+    {
+     "key": "DEMO-102",
+     "added": true
+    }
+   ],
+   "1791458118000": [
+    {
+     "key": "DEMO-121",
+     "column": {
+      "notDone": false,
+      "done": true,
+      "newStatus": "10009"
+     }
+    }
+   ],
+   "1791458119000": [
+    {
+     "key": "DEMO-120",
+     "column": {
+      "notDone": false,
+      "done": true,
+      "newStatus": "10009"
+     }
+    }
+   ],
+   "1791458123000": [
+    {
+     "key": "DEMO-119",
+     "column": {
+      "notDone": false,
+      "done": true,
+      "newStatus": "10009"
+     }
+    }
+   ],
+   "1791458124000": [
+    {
+     "key": "DEMO-118",
+     "column": {
+      "notDone": false,
+      "done": true,
+      "newStatus": "10009"
+     }
+    }
+   ],
+   "1791802788000": [
+    {
+     "key": "DEMO-146",
+     "statC": {},
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1791802950000": [
+    {
+     "key": "DEMO-146",
+     "added": true
+    }
+   ],
+   "1791821640000": [
+    {
+     "key": "DEMO-147",
+     "statC": {
+      "newValue": 1.0
+     },
+     "added": true,
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1791891313000": [
+    {
+     "key": "DEMO-124",
+     "column": {
+      "notDone": false,
+      "done": true,
+      "newStatus": "10009"
+     }
+    }
+   ],
+   "1791901098000": [
+    {
+     "key": "DEMO-149",
+     "statC": {
+      "newValue": 1.0
+     },
+     "added": true,
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1791903083000": [
+    {
+     "key": "DEMO-150",
+     "statC": {
+      "newValue": 1.0
+     },
+     "added": true,
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1791905770000": [
+    {
+     "key": "DEMO-125",
+     "column": {
+      "notDone": false,
+      "done": true,
+      "newStatus": "10009"
+     }
+    }
+   ],
+   "1791910854000": [
+    {
+     "key": "DEMO-123",
+     "column": {
+      "notDone": false,
+      "done": true,
+      "newStatus": "10009"
+     }
+    }
+   ],
+   "1791911169000": [
+    {
+     "key": "DEMO-115",
+     "column": {
+      "notDone": false,
+      "done": true,
+      "newStatus": "10009"
+     }
+    }
+   ],
+   "1791913823000": [
+    {
+     "key": "DEMO-149",
+     "column": {
+      "notDone": false,
+      "done": true,
+      "newStatus": "10009"
+     }
+    }
+   ],
+   "1791971725000": [
+    {
+     "key": "DEMO-126",
+     "added": true
+    }
+   ],
+   "1791988430000": [
+    {
+     "key": "DEMO-151",
+     "statC": {},
+     "added": true,
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1791988648000": [
+    {
+     "key": "DEMO-151",
+     "statC": {
+      "newValue": 1.0
+     }
+    }
+   ],
+   "1791988704000": [
+    {
+     "key": "DEMO-152",
+     "statC": {
+      "newValue": 1.0
+     },
+     "column": {
+      "notDone": true,
+      "newStatus": "1"
+     }
+    }
+   ],
+   "1791993667000": [
+    {
+     "key": "DEMO-152",
+     "added": true
+    }
+   ]
+  },
+  "startTime": 1791295222000,
+  "endTime": 1793037600000,
+  "now": 1791997306387,
+  "statisticField": {
+   "typeId": "field",
+   "fieldId": "customfield_10016",
+   "id": "field_customfield_10016",
+   "name": "Story Points",
+   "isValid": true,
+   "isEnabled": true,
+   "renderer": "number"
+  },
+  "issueToParentKeys": {},
+  "issueToSummary": {
+   "DEMO-152": "Nouvelle tentative sur erreur réseau",
+   "DEMO-111": "Recherche plein texte dans le catalogue",
+   "DEMO-127": "Test de bout en bout : parcours mobile",
+   "DEMO-112": "Gestion des préférences de notification",
+   "DEMO-146": "Infobulle masquée par l'en-tête",
+   "DEMO-116": "Suppression de l'ancien module de templates",
+   "DEMO-103": "Filtre par date sur la liste des factures",
+   "DEMO-109": "Tri des colonnes du tableau de bord",
+   "DEMO-102": "Export CSV des commandes",
+   "DEMO-149": "Retirer l'ancien feature flag de connexion",
+   "DEMO-124": "Test de bout en bout : changement d'adresse",
+   "DEMO-150": "Largeur des colonnes du tableau",
+   "DEMO-125": "Test de bout en bout : consultation des factures",
+   "DEMO-126": "Test de bout en bout : messagerie",
+   "DEMO-128": "Préparer le jeu de données de démo",
+   "DEMO-115": "État de chargement sur la liste des clients",
+   "DEMO-108": "Pagination de l'historique des paiements",
+   "DEMO-129": "Script de reprise des adresses de facturation",
+   "DEMO-107": "Notification e-mail à la validation d'une commande",
+   "DEMO-131": "Erreur 500 sur la page d'accueil",
+   "DEMO-120": "Écran liste des commandes en Angular",
+   "DEMO-121": "Écran liste des messages en Angular",
+   "DEMO-101": "Page de connexion : message d'erreur générique",
+   "DEMO-122": "Test de bout en bout : création de compte",
+   "DEMO-147": "Garde de navigation sur les pages protégées",
+   "DEMO-123": "Test de bout en bout : paiement par carte",
+   "DEMO-110": "Migration du service d'authentification",
+   "DEMO-113": "Correction de l'encodage des PDF générés",
+   "DEMO-151": "Champ de recherche sans exemple de saisie",
+   "DEMO-117": "Batch de relance des paniers abandonnés",
+   "DEMO-130": "Erreur 403 à l'ouverture des paramètres",
+   "DEMO-118": "Cloisonnement des droits par organisation",
+   "DEMO-119": "Libellés tronqués sur mobile"
+  },
+  "workRateData": {
+   "timezone": "Europe/Paris",
+   "rates": [
+    {
+     "start": 1791295222000,
+     "end": 1791590400000,
+     "rate": 1
+    },
+    {
+     "start": 1791590400000,
+     "end": 1791763200000,
+     "rate": 0
+    },
+    {
+     "start": 1791763200000,
+     "end": 1792195200000,
+     "rate": 1
+    },
+    {
+     "start": 1792195200000,
+     "end": 1792368000000,
+     "rate": 0
+    },
+    {
+     "start": 1792368000000,
+     "end": 1792800000000,
+     "rate": 1
+    },
+    {
+     "start": 1792800000000,
+     "end": 1792972800000,
+     "rate": 0
+    },
+    {
+     "start": 1792972800000,
+     "end": 1793037600000,
+     "rate": 1
+    }
+   ]
+  },
+  "openCloseChanges": {}
+ },
+ "columns": [
+  {
+   "name": "À FAIRE",
+   "statusIds": [
+    "1",
+    "4"
+   ]
+  },
+  {
+   "name": "EN COURS",
+   "statusIds": [
+    "10015",
+    "10016",
+    "3"
+   ]
+  },
+  {
+   "name": "EN REVIEW",
+   "statusIds": [
+    "5"
+   ]
+  },
+  {
+   "name": "EN RECETTE",
+   "statusIds": [
+    "10008"
+   ]
+  },
+  {
+   "name": "TERMINÉ",
+   "statusIds": [
+    "10009"
+   ]
+  }
+ ],
+ "issues": [
+  {
+   "key": "DEMO-152",
+   "summary": "Nouvelle tentative sur erreur réseau",
+   "statusId": "1",
+   "subtask": false,
+   "assignee": "Alice Martin",
+   "estimate": 1.0,
+   "parent": null,
+   "mergeRequests": []
+  },
+  {
+   "key": "DEMO-151",
+   "summary": "Champ de recherche sans exemple de saisie",
+   "statusId": "1",
+   "subtask": false,
+   "assignee": "Alice Martin",
+   "estimate": 1.0,
+   "parent": null,
+   "mergeRequests": []
+  },
+  {
+   "key": "DEMO-150",
+   "summary": "Largeur des colonnes du tableau",
+   "statusId": "1",
+   "subtask": false,
+   "assignee": "Bruno Lefèvre",
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-105",
+    "summary": "Migration des droits",
+    "isEpic": true
+   },
+   "mergeRequests": []
+  },
+  {
+   "key": "DEMO-149",
+   "summary": "Retirer l'ancien feature flag de connexion",
+   "statusId": "10009",
+   "subtask": false,
+   "assignee": null,
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-105",
+    "summary": "Migration des droits",
+    "isEpic": true
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/web-portal/-/merge_requests/1027"
+   ]
+  },
+  {
+   "key": "DEMO-148",
+   "summary": "Sous-tâche : Chargement",
+   "statusId": "1",
+   "subtask": true,
+   "assignee": "Chloé Bernard",
+   "estimate": null,
+   "parent": {
+    "key": "DEMO-129",
+    "summary": "Script de reprise des adresses de facturation",
+    "isEpic": false
+   },
+   "mergeRequests": []
+  },
+  {
+   "key": "DEMO-147",
+   "summary": "Garde de navigation sur les pages protégées",
+   "statusId": "5",
+   "subtask": false,
+   "assignee": "Chloé Bernard",
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-105",
+    "summary": "Migration des droits",
+    "isEpic": true
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/customer-api/-/merge_requests/374",
+    "https://gitlab.example.com/demo/customer-api/-/merge_requests/376",
+    "https://gitlab.example.com/demo/customer-api/-/merge_requests/377"
+   ]
+  },
+  {
+   "key": "DEMO-146",
+   "summary": "Infobulle masquée par l'en-tête",
+   "statusId": "5",
+   "subtask": false,
+   "assignee": "Alice Martin",
+   "estimate": null,
+   "parent": null,
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/233"
+   ]
+  },
+  {
+   "key": "DEMO-145",
+   "summary": "Sous-tâche : État vide",
+   "statusId": "1",
+   "subtask": true,
+   "assignee": "David Moreau",
+   "estimate": null,
+   "parent": {
+    "key": "DEMO-129",
+    "summary": "Script de reprise des adresses de facturation",
+    "isEpic": false
+   },
+   "mergeRequests": []
+  },
+  {
+   "key": "DEMO-144",
+   "summary": "Sous-tâche : Documentation",
+   "statusId": "3",
+   "subtask": true,
+   "assignee": "Alice Martin",
+   "estimate": null,
+   "parent": {
+    "key": "DEMO-129",
+    "summary": "Script de reprise des adresses de facturation",
+    "isEpic": false
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/230",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/232",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/234",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/236",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/237",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/238",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/240",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/241",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/242",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/244"
+   ]
+  },
+  {
+   "key": "DEMO-143",
+   "summary": "Sous-tâche : Revue UX",
+   "statusId": "5",
+   "subtask": true,
+   "assignee": "Alice Martin",
+   "estimate": null,
+   "parent": {
+    "key": "DEMO-129",
+    "summary": "Script de reprise des adresses de facturation",
+    "isEpic": false
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/230",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/232",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/243"
+   ]
+  },
+  {
+   "key": "DEMO-142",
+   "summary": "Sous-tâche : Intégration API",
+   "statusId": "5",
+   "subtask": true,
+   "assignee": "Alice Martin",
+   "estimate": null,
+   "parent": {
+    "key": "DEMO-129",
+    "summary": "Script de reprise des adresses de facturation",
+    "isEpic": false
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/237",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/239",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/242"
+   ]
+  },
+  {
+   "key": "DEMO-141",
+   "summary": "Sous-tâche : Traductions",
+   "statusId": "5",
+   "subtask": true,
+   "assignee": "Alice Martin",
+   "estimate": null,
+   "parent": {
+    "key": "DEMO-129",
+    "summary": "Script de reprise des adresses de facturation",
+    "isEpic": false
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/232",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/236",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/238",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/241"
+   ]
+  },
+  {
+   "key": "DEMO-140",
+   "summary": "Sous-tâche : Responsive",
+   "statusId": "5",
+   "subtask": true,
+   "assignee": "Alice Martin",
+   "estimate": null,
+   "parent": {
+    "key": "DEMO-129",
+    "summary": "Script de reprise des adresses de facturation",
+    "isEpic": false
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/229",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/238",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/240"
+   ]
+  },
+  {
+   "key": "DEMO-139",
+   "summary": "Sous-tâche : Accessibilité",
+   "statusId": "5",
+   "subtask": true,
+   "assignee": "Alice Martin",
+   "estimate": null,
+   "parent": {
+    "key": "DEMO-129",
+    "summary": "Script de reprise des adresses de facturation",
+    "isEpic": false
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/236",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/239"
+   ]
+  },
+  {
+   "key": "DEMO-138",
+   "summary": "Sous-tâche : Gestion des erreurs",
+   "statusId": "5",
+   "subtask": true,
+   "assignee": "Alice Martin",
+   "estimate": null,
+   "parent": {
+    "key": "DEMO-129",
+    "summary": "Script de reprise des adresses de facturation",
+    "isEpic": false
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/234",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/238"
+   ]
+  },
+  {
+   "key": "DEMO-137",
+   "summary": "Sous-tâche : Tri",
+   "statusId": "5",
+   "subtask": true,
+   "assignee": "Alice Martin",
+   "estimate": null,
+   "parent": {
+    "key": "DEMO-129",
+    "summary": "Script de reprise des adresses de facturation",
+    "isEpic": false
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/237"
+   ]
+  },
+  {
+   "key": "DEMO-136",
+   "summary": "Sous-tâche : Pagination",
+   "statusId": "5",
+   "subtask": true,
+   "assignee": "Alice Martin",
+   "estimate": null,
+   "parent": {
+    "key": "DEMO-129",
+    "summary": "Script de reprise des adresses de facturation",
+    "isEpic": false
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/229",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/236",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/239"
+   ]
+  },
+  {
+   "key": "DEMO-135",
+   "summary": "Sous-tâche : Tests unitaires",
+   "statusId": "5",
+   "subtask": true,
+   "assignee": "Alice Martin",
+   "estimate": null,
+   "parent": {
+    "key": "DEMO-129",
+    "summary": "Script de reprise des adresses de facturation",
+    "isEpic": false
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/234",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/238"
+   ]
+  },
+  {
+   "key": "DEMO-134",
+   "summary": "Sous-tâche : Service API",
+   "statusId": "5",
+   "subtask": true,
+   "assignee": "Alice Martin",
+   "estimate": null,
+   "parent": {
+    "key": "DEMO-129",
+    "summary": "Script de reprise des adresses de facturation",
+    "isEpic": false
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/232"
+   ]
+  },
+  {
+   "key": "DEMO-133",
+   "summary": "Sous-tâche : Composant filtres",
+   "statusId": "5",
+   "subtask": true,
+   "assignee": "Alice Martin",
+   "estimate": null,
+   "parent": {
+    "key": "DEMO-129",
+    "summary": "Script de reprise des adresses de facturation",
+    "isEpic": false
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/230",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/228"
+   ]
+  },
+  {
+   "key": "DEMO-132",
+   "summary": "Sous-tâche : Composant tableau",
+   "statusId": "5",
+   "subtask": true,
+   "assignee": "Alice Martin",
+   "estimate": null,
+   "parent": {
+    "key": "DEMO-129",
+    "summary": "Script de reprise des adresses de facturation",
+    "isEpic": false
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/229",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/228",
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/236"
+   ]
+  },
+  {
+   "key": "DEMO-131",
+   "summary": "Erreur 500 sur la page d'accueil",
+   "statusId": "1",
+   "subtask": false,
+   "assignee": "Chloé Bernard",
+   "estimate": 3.0,
+   "parent": {
+    "key": "DEMO-106",
+    "summary": "Préférences utilisateur",
+    "isEpic": true
+   },
+   "mergeRequests": []
+  },
+  {
+   "key": "DEMO-130",
+   "summary": "Erreur 403 à l'ouverture des paramètres",
+   "statusId": "1",
+   "subtask": false,
+   "assignee": "Alice Martin",
+   "estimate": 20.0,
+   "parent": {
+    "key": "DEMO-114",
+    "summary": "Run applicatif",
+    "isEpic": true
+   },
+   "mergeRequests": []
+  },
+  {
+   "key": "DEMO-129",
+   "summary": "Script de reprise des adresses de facturation",
+   "statusId": "3",
+   "subtask": false,
+   "assignee": "Alice Martin",
+   "estimate": 13.0,
+   "parent": {
+    "key": "DEMO-114",
+    "summary": "Run applicatif",
+    "isEpic": true
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/request-api/-/merge_requests/228"
+   ]
+  },
+  {
+   "key": "DEMO-128",
+   "summary": "Préparer le jeu de données de démo",
+   "statusId": "10009",
+   "subtask": false,
+   "assignee": null,
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-105",
+    "summary": "Migration des droits",
+    "isEpic": true
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/web-portal/-/merge_requests/1025"
+   ]
+  },
+  {
+   "key": "DEMO-127",
+   "summary": "Test de bout en bout : parcours mobile",
+   "statusId": "10009",
+   "subtask": false,
+   "assignee": null,
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-105",
+    "summary": "Migration des droits",
+    "isEpic": true
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/web-portal/-/merge_requests/1022",
+    "https://gitlab.example.com/demo/web-portal/-/merge_requests/1023"
+   ]
+  },
+  {
+   "key": "DEMO-126",
+   "summary": "Test de bout en bout : messagerie",
+   "statusId": "1",
+   "subtask": false,
+   "assignee": "Chloé Bernard",
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-106",
+    "summary": "Préférences utilisateur",
+    "isEpic": true
+   },
+   "mergeRequests": []
+  },
+  {
+   "key": "DEMO-125",
+   "summary": "Test de bout en bout : consultation des factures",
+   "statusId": "10009",
+   "subtask": false,
+   "assignee": "Emma Petit",
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-105",
+    "summary": "Migration des droits",
+    "isEpic": true
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/web-portal/-/merge_requests/1026"
+   ]
+  },
+  {
+   "key": "DEMO-124",
+   "summary": "Test de bout en bout : changement d'adresse",
+   "statusId": "10009",
+   "subtask": false,
+   "assignee": "Emma Petit",
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-105",
+    "summary": "Migration des droits",
+    "isEpic": true
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/web-portal/-/merge_requests/1026"
+   ]
+  },
+  {
+   "key": "DEMO-123",
+   "summary": "Test de bout en bout : paiement par carte",
+   "statusId": "10009",
+   "subtask": false,
+   "assignee": "Emma Petit",
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-105",
+    "summary": "Migration des droits",
+    "isEpic": true
+   },
+   "mergeRequests": []
+  },
+  {
+   "key": "DEMO-122",
+   "summary": "Test de bout en bout : création de compte",
+   "statusId": "10008",
+   "subtask": false,
+   "assignee": null,
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-105",
+    "summary": "Migration des droits",
+    "isEpic": true
+   },
+   "mergeRequests": []
+  },
+  {
+   "key": "DEMO-121",
+   "summary": "Écran liste des messages en Angular",
+   "statusId": "10009",
+   "subtask": false,
+   "assignee": null,
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-105",
+    "summary": "Migration des droits",
+    "isEpic": true
+   },
+   "mergeRequests": []
+  },
+  {
+   "key": "DEMO-120",
+   "summary": "Écran liste des commandes en Angular",
+   "statusId": "10009",
+   "subtask": false,
+   "assignee": null,
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-105",
+    "summary": "Migration des droits",
+    "isEpic": true
+   },
+   "mergeRequests": []
+  },
+  {
+   "key": "DEMO-119",
+   "summary": "Libellés tronqués sur mobile",
+   "statusId": "10009",
+   "subtask": false,
+   "assignee": null,
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-105",
+    "summary": "Migration des droits",
+    "isEpic": true
+   },
+   "mergeRequests": []
+  },
+  {
+   "key": "DEMO-118",
+   "summary": "Cloisonnement des droits par organisation",
+   "statusId": "10009",
+   "subtask": false,
+   "assignee": null,
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-105",
+    "summary": "Migration des droits",
+    "isEpic": true
+   },
+   "mergeRequests": []
+  },
+  {
+   "key": "DEMO-117",
+   "summary": "Batch de relance des paniers abandonnés",
+   "statusId": "10008",
+   "subtask": false,
+   "assignee": null,
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-105",
+    "summary": "Migration des droits",
+    "isEpic": true
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/customer-api/-/merge_requests/370",
+    "https://gitlab.example.com/demo/onboarding-batch/-/merge_requests/172",
+    "https://gitlab.example.com/demo/notifications/-/merge_requests/62",
+    "https://gitlab.example.com/demo/notifications/-/merge_requests/66"
+   ]
+  },
+  {
+   "key": "DEMO-116",
+   "summary": "Suppression de l'ancien module de templates",
+   "statusId": "10008",
+   "subtask": false,
+   "assignee": null,
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-105",
+    "summary": "Migration des droits",
+    "isEpic": true
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/web-portal/-/merge_requests/1018",
+    "https://gitlab.example.com/demo/web-portal/-/merge_requests/1019"
+   ]
+  },
+  {
+   "key": "DEMO-115",
+   "summary": "État de chargement sur la liste des clients",
+   "statusId": "10009",
+   "subtask": false,
+   "assignee": null,
+   "estimate": null,
+   "parent": {
+    "key": "DEMO-105",
+    "summary": "Migration des droits",
+    "isEpic": true
+   },
+   "mergeRequests": []
+  },
+  {
+   "key": "DEMO-113",
+   "summary": "Correction de l'encodage des PDF générés",
+   "statusId": "6",
+   "subtask": false,
+   "assignee": "Farid Haddad",
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-106",
+    "summary": "Préférences utilisateur",
+    "isEpic": true
+   },
+   "mergeRequests": []
+  },
+  {
+   "key": "DEMO-112",
+   "summary": "Gestion des préférences de notification",
+   "statusId": "10008",
+   "subtask": false,
+   "assignee": null,
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-105",
+    "summary": "Migration des droits",
+    "isEpic": true
+   },
+   "mergeRequests": []
+  },
+  {
+   "key": "DEMO-111",
+   "summary": "Recherche plein texte dans le catalogue",
+   "statusId": "10008",
+   "subtask": false,
+   "assignee": null,
+   "estimate": 2.0,
+   "parent": {
+    "key": "DEMO-105",
+    "summary": "Migration des droits",
+    "isEpic": true
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/notifications/-/merge_requests/66"
+   ]
+  },
+  {
+   "key": "DEMO-110",
+   "summary": "Migration du service d'authentification",
+   "statusId": "6",
+   "subtask": false,
+   "assignee": null,
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-105",
+    "summary": "Migration des droits",
+    "isEpic": true
+   },
+   "mergeRequests": []
+  },
+  {
+   "key": "DEMO-109",
+   "summary": "Tri des colonnes du tableau de bord",
+   "statusId": "6",
+   "subtask": false,
+   "assignee": null,
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-105",
+    "summary": "Migration des droits",
+    "isEpic": true
+   },
+   "mergeRequests": []
+  },
+  {
+   "key": "DEMO-108",
+   "summary": "Pagination de l'historique des paiements",
+   "statusId": "10008",
+   "subtask": false,
+   "assignee": null,
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-106",
+    "summary": "Préférences utilisateur",
+    "isEpic": true
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/web-portal/-/merge_requests/1004"
+   ]
+  },
+  {
+   "key": "DEMO-107",
+   "summary": "Notification e-mail à la validation d'une commande",
+   "statusId": "10008",
+   "subtask": false,
+   "assignee": "Chloé Bernard",
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-104",
+    "summary": "Refonte de l'espace client",
+    "isEpic": true
+   },
+   "mergeRequests": []
+  },
+  {
+   "key": "DEMO-103",
+   "summary": "Filtre par date sur la liste des factures",
+   "statusId": "1",
+   "subtask": false,
+   "assignee": "Chloé Bernard",
+   "estimate": 2.0,
+   "parent": {
+    "key": "DEMO-106",
+    "summary": "Préférences utilisateur",
+    "isEpic": true
+   },
+   "mergeRequests": []
+  },
+  {
+   "key": "DEMO-102",
+   "summary": "Export CSV des commandes",
+   "statusId": "3",
+   "subtask": false,
+   "assignee": "Chloé Bernard",
+   "estimate": 3.0,
+   "parent": {
+    "key": "DEMO-106",
+    "summary": "Préférences utilisateur",
+    "isEpic": true
+   },
+   "mergeRequests": []
+  },
+  {
+   "key": "DEMO-101",
+   "summary": "Page de connexion : message d'erreur générique",
+   "statusId": "6",
+   "subtask": false,
+   "assignee": null,
+   "estimate": 1.0,
+   "parent": {
+    "key": "DEMO-106",
+    "summary": "Préférences utilisateur",
+    "isEpic": true
+   },
+   "mergeRequests": [
+    "https://gitlab.example.com/demo/customer-api/-/merge_requests/366",
+    "https://gitlab.example.com/demo/customer-api/-/merge_requests/368",
+    "https://gitlab.example.com/demo/onboarding-batch/-/merge_requests/171",
+    "https://gitlab.example.com/demo/web-portal/-/merge_requests/1020"
+   ]
+  }
+ ]
+}

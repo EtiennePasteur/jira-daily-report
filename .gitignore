@@ -1,0 +1,17 @@
+# Sorties du rapport : elles contiennent des données Jira réelles
+/out/
+*.jpg
+!examples/*.jpg
+daily.md
+!examples/daily.md
+data.json
+
+__pycache__/
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+*credentials*
+*secret*
