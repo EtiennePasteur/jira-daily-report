@@ -36,6 +36,8 @@ description: Rapport du daily Jira pour le sprint actif d'un board — burnup en
 `--publish` envoie `{"text": "<HTML>"}` en POST sur `TEAMS_WEBHOOK_URL` (flux Power Automate qui poste le champ
 `text` dans un canal), avec jusqu'à 10 essais en backoff exponentiel. Le HTML est la conversion de `daily.md` :
 Teams ignore les sauts de ligne, donc `<br>` en fin de ligne et `<br><br>` entre blocs, `<b>` et `<a>` ;
+titres dimensionnés par `<span style="font-size">` (Teams rend mal `<h1>`-`<h3>`), séparateur `<hr>`
+avant les `##`, détails en gris ; puces « • » plutôt que `<ul>`, trop espacé dans Teams ;
 `--teams-html fichier.html` l'écrit pour contrôle. `--embed-image` y intègre un burnup dédié (PNG en data URI,
 vignette d'environ 180 px de haut, pleine résolution au clic) : Teams refuse les messages de plus de 28 Ko (`RequestEntityTooLarge`), donc le script
 prend la meilleure résolution qui tient sous 27 000 octets, et publie sans image si aucune ne tient (avertissement sur stderr).

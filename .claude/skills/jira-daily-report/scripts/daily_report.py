@@ -553,11 +553,10 @@ def board_markdown(state, link, amount):
             out.append(" · ".join(f"{name} : {tickets_of(group)}" for name, group in by_assignee(assigned)))
             unassigned = [line for line in lines if not line["assignee"]]
             if unassigned:
-                out += ["", f"**Non affectés · {plural(tickets_of(unassigned), 'ticket')}**"]
+                out += ["", f"**Non affectés** · {plural(tickets_of(unassigned), 'ticket')}"]
                 out += [f"- {describe(line)} · {line['topic'] or 'Sans epic'}" for line in unassigned]
             else:
-                out.append("")
-                out.append("Tous les tickets à faire sont affectés.")
+                out += ["", "Tous les tickets à faire sont affectés."]
         else:
             for name, group in by_assignee(lines):
                 # Ligne vide avant chaque nom, sinon Markdown le colle au dernier ticket de la liste précédente.
@@ -617,16 +616,35 @@ def report_markdown(image_ref, base_url, sprint_name, stat_name, model, changes,
 
 # --- Teams ----------------------------------------------------------------------
 
+# Tailles de titre (#, ##, ###) : Teams rend mal <h1>-<h3> mais respecte font-size sur un <span>.
+TEAMS_HEADING_SIZES = {1: 20, 2: 18, 3: 15}
+TEAMS_SECONDARY = '<span style="font-size:13px;color:#6b6e76">{}</span>'
+
+
 def teams_html(markdown, image_tag=None):
-    """Convertit le rapport Markdown en HTML de message Teams.
+    """Convertit le rapport Markdown en HTML de message Teams, compact.
 
     Teams ignore les sauts de ligne : chaque ligne finit par <br>, et deux <br> séparent les blocs.
-    Sans `image_tag`, la ligne d'image est retirée.
+    Titres en <span> dimensionnés (## précédé d'un <hr>), détail des titres en gris ; puces « • » plutôt
+    que <ul>, dont Teams espace trop les marges. Sans `image_tag`, la ligne d'image est retirée.
     """
     def inline(text):
         text = html.escape(text, quote=False)
         text = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", text)
         return re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", r'<a href="\2">\1</a>', text)
+
+    def heading(level, text):
+        # « Titre (détail) » ou « Titre · compteurs » : le détail passe en gris.
+        main, detail = text, ""
+        if level > 1:
+            if match := re.fullmatch(r"(.*?) \(([^()]*)\)", text):
+                main, detail = match[1], f"({match[2]})"
+            elif " · " in text:
+                main, detail = text.rsplit(" · ", 1)
+        rendered = f'<span style="font-size:{TEAMS_HEADING_SIZES[level]}px"><b>{inline(main)}</b></span>'
+        if detail:
+            rendered += " " + TEAMS_SECONDARY.format(inline(detail))
+        return ("<hr>" if level == 2 else "") + rendered
 
     blocks = []
     for block in markdown.strip().split("\n\n"):
@@ -635,15 +653,21 @@ def teams_html(markdown, image_tag=None):
             if line.startswith("!["):
                 if image_tag:
                     rendered.append(image_tag)
-            elif heading := re.match(r"#+ (.*)", line):
-                rendered.append(f"<b>{inline(heading[1])}</b>")
+            elif match := re.match(r"(#+) (.*)", line):
+                rendered.append(heading(len(match[1]), match[2]))
             elif line.startswith("- "):
                 rendered.append("• " + inline(line[2:]))
+            elif match := re.fullmatch(r"\*\*([^*]+)\*\* · (.+)", line):
+                rendered.append(f"<b>{inline(match[1])}</b> " + TEAMS_SECONDARY.format(inline(match[2])))
             else:
                 rendered.append(inline(line))
         if rendered:
             blocks.append("<br>\n".join(rendered))
-    return "<br><br>\n".join(blocks)
+    out = blocks[0] if blocks else ""
+    for block in blocks[1:]:
+        # Le <hr> a sa propre marge : un seul <br> avant.
+        out += ("<br>\n" if block.startswith("<hr>") else "<br><br>\n") + block
+    return out
 
 
 # Teams refuse les messages de plus de 28 Ko (RequestEntityTooLarge) ; 27 000 octets passent.
